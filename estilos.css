@@ -92,6 +92,7 @@ main p{
 .sec .subsec :hover{
     transform: scale(1.20);
 }
+
 .sec .subsec img{
     width: 300px;
     float: inline-start;
