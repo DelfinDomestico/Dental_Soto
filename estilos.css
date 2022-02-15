@@ -77,7 +77,7 @@ main p{
     grid-area: sec;
     
     width: 100%;
-    background-color: rgb(36, 4, 124);
+    background-image: linear-gradient(to bottom,rgb(24, 14, 116),rgb(78, 186, 219));
     color: rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +85,11 @@ main p{
 }
 .sec .subsec{
     padding-top: 15px;
+    background-color: rgb(30, 98, 161);
+    border-radius: 15px;
+    border-style:inset;
 }
+
 .sec .subsec img{
     width: 300px;
     float: inline-start;
@@ -94,6 +98,7 @@ main p{
 .sec .subsec p{
     width: 300px;
     padding-bottom: 20px;
+    
 }
 
 footer{
@@ -116,4 +121,10 @@ footer{
     height: auto;
     background-color: rgb(45, 19, 160);
     color: #fff;
+    transition: all 2s;
+}
+
+
+#mainlocal :hover{
+    transform: scale(1.2);
 }
