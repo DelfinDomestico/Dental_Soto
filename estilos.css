@@ -85,6 +85,12 @@ main p{
 }
 .sec .subsec{
     padding-top: 15px;
+    background-color: rgb(30, 98, 161);
+    border-radius: 15px;
+    border-style:inset;
+}
+.sec .subsec :hover{
+    transform: scale(1.20);
 }
 .sec .subsec img{
     width: 300px;
@@ -94,6 +100,7 @@ main p{
 .sec .subsec p{
     width: 300px;
     padding-bottom: 20px;
+    
 }
 
 footer{
@@ -116,4 +123,10 @@ footer{
     height: auto;
     background-color: rgb(45, 19, 160);
     color: #fff;
+    transition: all 2s;
+}
+
+
+#mainlocal :hover{
+    transform: scale(1.2);
 }
