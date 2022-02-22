@@ -2,26 +2,14 @@
     margin: 0;
     padding: 0;
 }
-body{
-    display:grid;
-    grid-template-areas: "header header header"
-                         "portada portada portada"
-                         "portada portada portada"
-                         "portada portada portada"
-                         "sb sb sb"
-                         "sec sec sec"
-                         "sec sec sec"
-                         "pie pie pie";
-}
-html{
+l{
     scroll-behavior: smooth;
 }
 
-main{
+.mainindex{
     height: 100vh;
     width: 100%;
-    background-image: url(imagenes/fondo.jpg);
-    grid-area: portada;
+    background-image: url(imagenes/fondo1.png),url(imagenes/fondo.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -43,7 +31,7 @@ main p{
     grid-area: sec;
     
     width: 100%;
-    background-image: linear-gradient(to bottom,rgb(48, 119, 161),rgb(136, 201, 221));
+    background-image: linear-gradient(to bottom,rgb(48, 87, 161),rgb(136, 201, 221));
     color: rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
@@ -82,6 +70,8 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100vh;
+    background-image: url(imagenes/fondogeneral.png);
 }
 #mainlocal section{
     text-align:justify;
@@ -92,7 +82,10 @@ footer{
     color: #fff;
     transition: all 2s;
 }
-
+.maincontacto{
+    height: 90vh;
+    background-image: url(imagenes/fondogeneral.png);
+}
 
 #mainlocal :hover{
     transform: scale(1.2);
