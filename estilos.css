@@ -28,8 +28,6 @@ main p{
     text-transform: uppercase;
 }
 .sec{
-    grid-area: sec;
-    
     width: 100%;
     background-image: linear-gradient(to bottom,rgb(73, 115, 194),rgb(136, 201, 221));
     color: rgb(0, 0, 0);
@@ -60,7 +58,6 @@ main p{
 }
 
 footer{
-    grid-area: pie;
     background-color: rgb(62, 141, 155);
     text-align: center;
 }
