@@ -31,7 +31,7 @@ main p{
     grid-area: sec;
     
     width: 100%;
-    background-image: linear-gradient(to bottom,rgb(48, 87, 161),rgb(136, 201, 221));
+    background-image: linear-gradient(to bottom,rgb(73, 115, 194),rgb(136, 201, 221));
     color: rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
@@ -42,6 +42,7 @@ main p{
     background-color: rgb(30, 98, 161);
     border-radius: 15px;
     border-style:inset;
+    transition: all 2s;
 }
 .sec .subsec :hover{
     transform: scale(1.20);
@@ -60,7 +61,7 @@ main p{
 
 footer{
     grid-area: pie;
-    background-color: rgb(17, 48, 114);
+    background-color: rgb(62, 141, 155);
     text-align: center;
 }
 
