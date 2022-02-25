@@ -1,0 +1,91 @@
+$azulito:rgb(30, 98, 161);
+*{
+    margin: 0;
+    padding: 0;
+}
+l{
+    scroll-behavior: smooth;
+}
+
+.mainindex{
+    height: 100vh;
+    width: 100%;
+    background-image: url(imagenes/fondo1.png),url(imagenes/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    text-align: center;
+    padding-top: 205px;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+main p{
+    text-align: center;
+    padding-top: 55px;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+.sec{
+    width: 100%;
+    background-image: linear-gradient(to bottom,rgb(73, 115, 194),rgb(136, 201, 221));
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sec .subsec{
+    padding-top: 15px;
+    background-color: $azulito;
+    border-radius: 15px;
+    border-style:inset;
+    transition: all 2s;
+}
+.sec .subsec :hover{
+    transform: scale(1.20);
+}
+
+.sec .subsec img{
+    width: 300px;
+    float: inline-start;
+    border-radius: 100px;
+}
+.sec .subsec p{
+    width: 300px;
+    padding-bottom: 20px;
+    
+}
+
+footer{
+    background-color: rgb(62, 141, 155);
+    text-align: center;
+}
+
+
+
+#mainlocal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-image: url(imagenes/fondogeneral.png);
+}
+#mainlocal section{
+    text-align:justify;
+    font-size: 20px;
+    width: 500px;
+    height: auto;
+    background-color: rgb(45, 19, 160,0.4);
+    color: #fff;
+    transition: all 2s;
+}
+.maincontacto{
+    height: 90vh;
+    background-image: url(imagenes/fondogeneral.png);
+}
+
+#mainlocal :hover{
+    transform: scale(1.2);
+}
