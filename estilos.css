@@ -48,8 +48,8 @@ main p{
 
 .sec .subsec img{
     width: 300px;
-    float: inline-start;
     border-radius: 100px;
+    float: inline-start;
 }
 .sec .subsec p{
     width: 300px;

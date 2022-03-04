@@ -1,4 +1,12 @@
-$azulito:rgb(30, 98, 161);
+@mixin img-perfil() {
+    width: 300px;
+    border-radius: 100px;
+};
+$colores:(
+    azul:rgb(30, 98, 161),
+    rojo:rgb(255,0,0)
+);
+$azulito: map-get($colores,azul);
 *{
     margin: 0;
     padding: 0;
@@ -48,9 +56,8 @@ main p{
 }
 
 .sec .subsec img{
-    width: 300px;
+    
     float: inline-start;
-    border-radius: 100px;
 }
 .sec .subsec p{
     width: 300px;
