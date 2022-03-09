@@ -88,3 +88,7 @@ footer{
 #mainlocal :hover{
     transform: scale(1.2);
 }
+.divsec{
+    height: 50px;
+    width: 100%;
+}
