@@ -88,7 +88,33 @@ footer{
 #mainlocal :hover{
     transform: scale(1.2);
 }
+.mainservicio{
+    background-image: url(imagenes/fondogeneral.png);
+    height: 100%;
+}
+.mainservicio h1{
+    padding-top: 1px;
+}
 .divsec{
     height: 50px;
+    width: 100%;
+}
+.contenedor-servicios{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.item{
+    height: 250px;
+    width: 200px;
+
+}
+.item p{
+    padding-top: 3px;
+    background-color: rgb(61, 163, 223);
+}
+.item img{
+    
     width: 100%;
 }
