@@ -19,6 +19,9 @@ class CCliente{
             console.log(servicios[i]);
         }
     }
+    get_servicios(){
+        return this.servicios;
+    }
     buscar_servicio(nombreServicio){
         let serv;
         for(let i=0;i<this.servicios.length;++i){
@@ -36,6 +39,25 @@ class CCliente{
         return costo;
     }
 }
+//desestructurador
+const desestructurar_servicios=([nombre,costo])=>{
+    console.log(nombre,costo);
+};
+//desestructurador
+// funciones de los botones
+let button_añadirendodoncia=document.getElementById("añadir-endodoncia");
+let button_añadirlimpieza=document.getElementById("añadir-limpieza");
+let button_mostrarservicios=document.getElementById("mostrar-servicios");
+button_añadirendodoncia.onclick=()=>{cliente.add_servicio({nombre : 'Endodonsia', costo : 50});};
+button_añadirlimpieza.onclick=()=>{cliente.add_servicio({nombre : 'Limpieza', costo : 30});};
+button_mostrarservicios.onclick=()=>{
+    servicios=cliente.get_servicios();
+    for(servicio in servicios){
+        desestructurar_servicios(servicio);
+    }
+};
+//fin funciones de botones
+
 
 let nombre=prompt('Ingrese su nombre por favor');
 let edad=prompt('Ingrese su edad por favor');
@@ -47,5 +69,5 @@ while(cliente.es_menor())
     edad=prompt('Ingrese su edad por favor');
     cliente.set_datos(nombre,edad);
 }
-cliente.add_servicio({nombre : 'Endodonsia', costo : 50});
-console.log(cliente.buscar_servicio('Endodonsia'));
+
+
