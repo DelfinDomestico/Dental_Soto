@@ -48,13 +48,17 @@ const desestructurar_servicios=([nombre,costo])=>{
 let button_añadirendodoncia=document.getElementById("añadir-endodoncia");
 let button_añadirlimpieza=document.getElementById("añadir-limpieza");
 let button_mostrarservicios=document.getElementById("mostrar-servicios");
-button_añadirendodoncia.onclick=()=>{cliente.add_servicio({nombre : 'Endodonsia', costo : 50});};
-button_añadirlimpieza.onclick=()=>{cliente.add_servicio({nombre : 'Limpieza', costo : 30});};
+button_añadirendodoncia.onclick=()=>{cliente.add_servicio({nombre : 'Endodonsia', costo : 50});
+Toastify({
+    text: "Endodonsia añadida a la lista de servicios"
+}).showToast();
+};
+button_añadirlimpieza.onclick=()=>{cliente.add_servicio({nombre : 'Limpieza', costo : 30});
+Toastify({
+    text: "Limpieza añadida a la lista de servicios"
+}).showToast();};
 button_mostrarservicios.onclick=()=>{
-    servicios=cliente.get_servicios();
-    for(servicio in servicios){
-        desestructurar_servicios(servicio);
-    }
+    cliente.mostrar_servicios();
 };
 //fin funciones de botones
 
