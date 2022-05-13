@@ -16,7 +16,7 @@ class CCliente{
     }
     mostrar_servicios(){
         for(let i=0;i<this.servicios.length;++i){
-            console.log(servicios[i]);
+            console.log(this.servicios[i]);
         }
     }
     get_servicios(){
@@ -39,6 +39,7 @@ class CCliente{
         return costo;
     }
 }
+
 //desestructurador
 const desestructurar_servicios=([nombre,costo])=>{
     console.log(nombre,costo);
@@ -48,6 +49,7 @@ const desestructurar_servicios=([nombre,costo])=>{
 let button_añadirendodoncia=document.getElementById("añadir-endodoncia");
 let button_añadirlimpieza=document.getElementById("añadir-limpieza");
 let button_mostrarservicios=document.getElementById("mostrar-servicios");
+let button_archivar=document.getElementById("archivar");
 button_añadirendodoncia.onclick=()=>{cliente.add_servicio({nombre : 'Endodonsia', costo : 50});
 Toastify({
     text: "Endodonsia añadida a la lista de servicios"
@@ -60,8 +62,18 @@ Toastify({
 button_mostrarservicios.onclick=()=>{
     cliente.mostrar_servicios();
 };
+button_archivar.onclick=()=>{
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify(cliente),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
 //fin funciones de botones
-
 
 let nombre=prompt('Ingrese su nombre por favor');
 let edad=prompt('Ingrese su edad por favor');
@@ -72,6 +84,8 @@ while(cliente.es_menor())
     nombre=prompt('Ingrese su nombre por favor');
     edad=prompt('Ingrese su edad por favor');
     cliente.set_datos(nombre,edad);
-}
+};
+
+
 
 

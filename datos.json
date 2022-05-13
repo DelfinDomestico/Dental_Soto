@@ -1,0 +1,17 @@
+[
+    {
+        "nombre":"Enrique",
+        "edad":31,
+        "servicios":[
+            {
+                "nombre_servicio":"Odontología",
+                "costo":"50"
+            },
+            {   
+                "nombre_servicio":"Endodoncia",
+                "costo":"80"
+            }
+        ]
+    }
+    
+]
