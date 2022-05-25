@@ -134,6 +134,13 @@ button_añadirlimpieza.onclick=()=>{
     
 button_mostrarservicios.onclick=()=>{
     if(cliente){
+        let m=document.querySelector('#servicios-adquiridos');
+        let listserv=cliente.get_servicios();
+        for(const servicio of listserv){
+            let contenedor=document.createElement("div");
+            contenedor.innerHTML=`<p>Servicio: ${servicio.nombre}</p> <p>Costo: ${servicio.costo}`;
+            m.appendChild(contenedor);
+        }
         cliente.mostrar_servicios();
     }
     
@@ -152,6 +159,7 @@ button_archivar.onclick=()=>{
     }
     
 }
+
 //fin funciones de botones
 
 
