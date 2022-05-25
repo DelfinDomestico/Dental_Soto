@@ -5,7 +5,7 @@ class CCliente{
         this.servicios=[];
     }
     es_menor(){
-        return edad<18;
+        return this.edad<18;
     }
     set_datos(nombre,edad){
         this.nombre=nombre;
@@ -62,7 +62,7 @@ button_ingresar.onclick=()=>{
             alert('No cumple con la edad');
             nombre=prompt('Ingrese su nombre por favor');
             edad=prompt('Ingrese su edad por favor');
-            cliente.set_datos(nombre,edad);
+            cliente.set_datos(nombre,parseInt(edad));
         };
     }
     else{
@@ -71,34 +71,76 @@ button_ingresar.onclick=()=>{
     
 }
 button_añadirrehabilitacion=()=>{
-    cliente.add_servicio({nombre:'Rehabilitacion',costo:60});
+    if(cliente){
+        cliente.add_servicio({nombre:'Rehabilitacion',costo:60});
+        Toastify({
+            text: "Rehabilitacion añadida a la lista de servicios"
+            }).showToast();
+    }
+    
 }
 button_añadircirugia.onclick=()=>{
-    cliente.add_servicio({nombre:'Cirugia',costo:140});
+    if(cliente){
+        cliente.add_servicio({nombre:'Cirugia',costo:140});
+        Toastify({
+            text: "Cirugía añadida a la lista de servicios"
+            }).showToast();
+    }
+    
 }
 button_añadircorona.onclick=()=>{
-    cliente.add_servicio({nombre:'Corona',costo:110});
+    if(cliente){
+        cliente.add_servicio({nombre:'Corona',costo:110});
+        Toastify({
+            text: "Corona añadida a la lista de servicios"
+            }).showToast();
+    }
+    
 }
 button_añadirperidoncia.onclick=()=>{
-    cliente.add_servicio({nombre:'Peridonsia',costo:80});
+    if(cliente){
+        cliente.add_servicio({nombre:'Peridonsia',costo:80});
+        Toastify({
+            text: "Perdonsia añadida a la lista de servicios"
+            }).showToast();
+    }
+    
 }
 button_añadirortodoncia.onclick=()=>{
-    cliente.add_servicio({nombre:'Ortodonsia', costo:40});
+    if(cliente){
+        cliente.add_servicio({nombre:'Ortodonsia', costo:40});
+        Toastify({
+            text: "Ortodonsia añadida a la lista de servicios"
+            }).showToast();
+    }
+    
 }
-button_añadirendodoncia.onclick=()=>{cliente.add_servicio({nombre : 'Endodonsia', costo : 50});
-Toastify({
-    text: "Endodonsia añadida a la lista de servicios"
-}).showToast();
+button_añadirendodoncia.onclick=()=>{
+    if(cliente){
+        cliente.add_servicio({nombre : 'Endodonsia', costo : 50});
+        Toastify({
+        text: "Endodonsia añadida a la lista de servicios"
+        }).showToast();
+    }
+    
 };
-button_añadirlimpieza.onclick=()=>{cliente.add_servicio({nombre : 'Limpieza', costo : 30});
-Toastify({
-    text: "Limpieza añadida a la lista de servicios"
-}).showToast();};
+button_añadirlimpieza.onclick=()=>{
+    if(cliente){
+        cliente.add_servicio({nombre : 'Limpieza', costo : 30});
+        Toastify({
+        text: "Limpieza añadida a la lista de servicios"
+        }).showToast();};
+    }
+    
 button_mostrarservicios.onclick=()=>{
-    cliente.mostrar_servicios();
+    if(cliente){
+        cliente.mostrar_servicios();
+    }
+    
 };
 button_archivar.onclick=()=>{
-    fetch('https://jsonplaceholder.typicode.com/posts', {
+    if(cliente){
+        fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify(cliente),
         headers: {
@@ -107,6 +149,8 @@ button_archivar.onclick=()=>{
       })
         .then((response) => response.json())
         .then((json) => console.log(json));
+    }
+    
 }
 //fin funciones de botones
 
